@@ -7,12 +7,12 @@
         opened
         class="p-6"
     >   
-        <div>Filters</div>
+        <app-filters (showCategory)="onShowCategory($event)"></app-filters>
     </mat-drawer>
     <mat-drawer-container
         class="p-6"
     >
         <app-products-header (columsCountChange)="onColumnsCountUpdate($event)"></app-products-header>
-        {{cols}}
+        {{category}}
     </mat-drawer-container>
 </mat-drawer-container>
